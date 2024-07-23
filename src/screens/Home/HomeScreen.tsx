@@ -42,8 +42,8 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   image: {
-    width: width * 0.9, // Adjust as needed
-    height: height * 0.4, // Adjust as needed
+    width: width * 0.9, 
+    height: height * 0.4, 
     resizeMode: 'contain',
     marginBottom: 20,
   },
