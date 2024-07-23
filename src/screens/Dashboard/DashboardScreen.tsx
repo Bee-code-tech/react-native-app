@@ -11,7 +11,6 @@ interface Props {
 const DashboardScreen: React.FC<Props> = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <Header title="Dashboard Screen" />
       <View style={styles.content}>
         <Text style={styles.text}>Welcome to the Dashboard!</Text>
         <Button title="Go to Send" onPress={() => navigation.navigate('Send')} />

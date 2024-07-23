@@ -11,7 +11,6 @@ interface Props {
 const SendScreen: React.FC<Props> = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <Header title="Send Screen" />
       <View style={styles.content}>
         <Text style={styles.text}>Send something here!</Text>
         <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
