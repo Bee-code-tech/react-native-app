@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { DashboardScreenNavigationProp } from '../../types/navigation';
-import Header from '../../components/Header';
 import Button from '../../components/Button';
 
 interface Props {
