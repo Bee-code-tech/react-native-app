@@ -9,10 +9,17 @@ interface BoxComponentProps {
 }
 
 const BoxComponent: React.FC<BoxComponentProps> = ({ text, icon, backgroundColor = '#fff', textColor = '#000' }) => {
+
+     // Define the images object locally
+  const images: { [key: string]: ImageSourcePropType } = {
+    'card.png': require('../assets/images/card.png'),
+    'boy.png': require('../assets/images/boy.png'),
+   
+  };
   return (
     <View style={[styles.box, { backgroundColor }]}>
       <Text style={[styles.boxText, { color: textColor }]}>{text}</Text>
-      <Image source={require(`../assets/images/${icon}`)} style={styles.boxIcon} />
+      <Image source={images[icon]} style={styles.boxIcon} />
     </View>
   );
 };
@@ -23,15 +30,16 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     borderRadius: 10,
+    height: 80,
     padding: 15,
     marginVertical: 10,
   },
   boxText: {
-    fontSize: 16,
+    fontSize: 26,
   },
   boxIcon: {
-    width: 24,
-    height: 24,
+    width: 54,
+    height: 54,
   },
 });
 
